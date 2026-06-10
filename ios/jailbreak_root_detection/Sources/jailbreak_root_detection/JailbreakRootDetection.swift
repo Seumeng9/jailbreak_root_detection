@@ -7,6 +7,7 @@
 
 import Foundation
 import IOSSecuritySuite
+import UIKit
 
 class JailbreakRootDetection {
     

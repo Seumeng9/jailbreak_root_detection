@@ -76,3 +76,10 @@ public class SwiftJailbreakRootDetectionPlugin: NSObject, FlutterPlugin {
     }
     
 }
+
+@objc(JailbreakRootDetectionPlugin)
+public final class JailbreakRootDetectionPlugin: NSObject, FlutterPlugin {
+    public static func register(with registrar: FlutterPluginRegistrar) {
+        SwiftJailbreakRootDetectionPlugin.register(with: registrar)
+    }
+}

@@ -1,3 +1,7 @@
+## 1.2.1
+
+* Migrate to Swift Package Manager
+
 ## 1.2.0+1
 
 * Improve Android and SDK Compatibility Without Over-Upgrading
