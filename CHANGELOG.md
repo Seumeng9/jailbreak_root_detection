@@ -1,3 +1,7 @@
+## 1.2.3
+
+* Removes the CocoaPods setup that was reintroduced into the example app in 1.2.2, so it builds with Swift Package Manager again.
+
 ## 1.2.2
 
 * Updates minimum supported SDK version to Flutter 3.44/Dart 3.12.
