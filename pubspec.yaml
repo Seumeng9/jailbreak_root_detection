@@ -6,7 +6,8 @@ homepage: https://github.com/w3connext/jailbreak_root_detection
 environment:
   # sdk: ^3.12.0
   sdk: '>=3.11.0 <4.0.0' 
-  flutter: ">=3.44.0"
+  # flutter: ">=3.44.0"
+  flutter: '>=3.41.0' 
 
 dependencies:
   flutter:
