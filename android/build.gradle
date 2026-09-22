@@ -1,17 +1,28 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+
+group 'com.w3conext.jailbreak_root_detection'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Ensures the build engine tools are loaded correctly for the sub-project
+        classpath 'com.android.tools.build:gradle:7.4.2'
+    }
 }
 
 allprojects {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
     }
 }
 
-group 'com.w3conext.jailbreak_root_detection'
+// 💡 USE THE CLASSIC APPLY SYNTAX: This forces the plugin engine to register the Kotlin compiler
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     if (project.android.hasProperty("namespace")) {
@@ -36,7 +47,6 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
-
 }
 
 dependencies {
@@ -45,7 +55,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
 }
 
-// because 'org.jetbrains.kotlin.android' is loaded at the top!
+// Forces the Kotlin compiler task to compile Java 17 bytecode
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions {
         jvmTarget = "17"
